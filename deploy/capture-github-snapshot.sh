@@ -25,6 +25,10 @@ for slug in (root / "slugs").read_text().splitlines():
         continue
     value = json.loads((root / f"{slug}.json").read_text())
     value.pop("publishes", None)
+    # The local instance's status target points at a throwaway tunnel. The public copy is
+    # read-only, so omit that dead/private link rather than exposing it in the snapshot.
+    if isinstance(value.get("status"), dict):
+        value["status"].pop("url", None)
     dossiers[slug] = value
 captured = datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z")
 out.parent.mkdir(parents=True, exist_ok=True)
