@@ -26,6 +26,7 @@ work/sandbox-check/
 work/backtest/logs*/
 work/sdktest/
 work/judging/raw-first-message.txt
+work/packaging/.staged-scan.txt
 work/shots/
 work/repos/
 work/.cache/
