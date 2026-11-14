@@ -1,8 +1,8 @@
-app = "countersign"
+app = "countersign-demo"
 primary_region = "arn"
 
 [build]
-  dockerfile = "deploy/Dockerfile"
+  dockerfile = "Dockerfile"
 
 [env]
   PORT = "8080"
@@ -16,7 +16,7 @@ primary_region = "arn"
   cpu_kind = "shared"
   cpus = 1
 
-[[http_service]]
+[http_service]
   internal_port = 8080
   force_https = true
   auto_stop_machines = false
