@@ -1,6 +1,6 @@
 # Packaging secret scan
 
-Scanned 213 staged files on 2026-11-14 before the first commit. Commands used:
+Scanned 213 staged files on 2026-11-14 before the first commit; the final staged tree was 215 files after adding the web/film MIT metadata and the in-progress ProofBar source. Commands used:
 
 - `gitleaks detect --no-banner --redact --source . --report-format json --report-path /tmp/countersign-gitleaks.json`
 - A staged-tree `git grep`/Python scan for GitHub token markers (`ghp_`, `gho_`, `github_pat_`), API-key markers (`sk-`, `AIza`, `xox*`), private keys, basic-auth URLs, e-mail addresses, phone-like numbers, absolute paths, internal hostnames and tunnel hostnames.
