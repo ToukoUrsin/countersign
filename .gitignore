@@ -2,6 +2,7 @@
 node_modules/
 web/node_modules/
 work/demo/film/node_modules/
+work/demo/node_modules
 work/demo/film/gh.json
 work/demo/film/timing.json
 web/dist/
@@ -37,6 +38,7 @@ vendor/
 *.swp
 __pycache__/
 .pytest_cache/
+sandbox/.python-image.lock
 
 # Large evidence artifacts and media are kept in the run archive
 data/dossiers/*/evidence/
