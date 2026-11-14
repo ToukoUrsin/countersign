@@ -1,0 +1,10 @@
+.git
+.gitignore
+node_modules
+web/node_modules
+web/dist
+work/logs
+work/repos
+work/shots
+work/sdktest
+*.log

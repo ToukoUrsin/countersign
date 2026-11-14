@@ -1,0 +1,60 @@
+# Dependencies and build output
+node_modules/
+web/node_modules/
+work/demo/film/node_modules/
+work/demo/film/gh.json
+work/demo/film/timing.json
+web/dist/
+*.tsbuildinfo
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+work/server.env
+**/server.env
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local runs, logs, caches and editor state
+work/logs/
+work/runs/
+work/sandbox-check/
+work/backtest/logs*/
+work/sdktest/
+work/judging/raw-first-message.txt
+work/shots/
+work/repos/
+work/.cache/
+.claude/
+.cache/
+vendor/
+.DS_Store
+*.log
+*.tmp
+*.swp
+__pycache__/
+.pytest_cache/
+
+# Large evidence artifacts and media are kept in the run archive
+data/dossiers/*/evidence/
+data/dossiers/*/live/
+data/dossiers/*/dossier.*.json
+*.mp4
+*.mov
+*.webm
+*.avi
+*.mkv
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.wav
+*.mp3
+
+# Generated deployment data is refreshed from the clean backup by deploy/deploy.sh.
+# Keep its directory marker so a clean clone can run the script.
+deploy/demo-data/*
+!deploy/demo-data/.gitkeep

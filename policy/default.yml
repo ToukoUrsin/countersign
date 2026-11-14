@@ -1,0 +1,105 @@
+# Countersign routing policy — policy as code.
+# Lives in the reviewed repo as .countersign.yml on the base branch (so changing the
+# policy is itself a reviewed change). This file is the fallback for repos without one.
+version: "2026-11-14.1"
+fixRequests: off
+
+requirement:
+  # how a PR names its requirement, and where the requirement text lives
+  pattern: "REQ-(\\d+)"
+  source: "github-issues"
+  repo: ""            # owner/repo of the issue tracker; empty = the PR's own repo
+  missing: "full-read" # a change without a requirement cannot be traced → T3 for everything
+
+areas:
+  - { name: "tests",  paths: ["tests/**", "test/**", "**/*.test.*", "**/*.spec.*"], criticality: low }
+  - { name: "docs",   paths: ["**/*.md", "doc/**", "docs/**"], criticality: low }
+  - { name: "build",  paths: ["**/*.csproj", "**/*.props", "**/*.targets", "package.json", "**/Dockerfile", ".github/**"], criticality: medium }
+  - { name: "source", paths: ["src/**", "lib/**", "app/**"], criticality: medium }
+
+# starting trust for an area that has no track record yet
+defaultTrustLevel: 1
+
+sandbox:
+  adapter: "none"     # dotnet | none
+  testRoots: ["tests/"]
+  framework: ""
+  maxAblations: 10
+  canaries: 4
+  # source dir prefix → test project that exercises it (used when a PR changes source but no tests)
+  testMap: {}
+
+# Signed points per fact. Every factor shown in the UI comes from here.
+weights:
+  kind: { core-logic: 3, api-surface: 4, build-config: 2, test: 1, generated: 1, mechanical: 1, docs: 0 }
+  publicApi: 3
+  securitySensitive: 3
+  behaviourChangeOutsideRequirement: 3
+  untraced: 3
+  novelLogic: 1
+  errorHandling: 1
+  dependency: 2
+  blastRadius: { many: 2, some: 1, manyAt: 20, someAt: 5 }
+  size: { large: 2, medium: 1, largeAt: 300, mediumAt: 80 }
+  untested: 3            # ablation: reverting this code broke no test
+  ablationKilled: -1     # ablation: reverting this code broke a test
+  redGreen: -2           # tests in this unit fail on base and pass on head
+  mechanicalVerified: -3 # every changed line matches the stated rule
+  generatedVerified: -2  # generated output is re-derived by a passing test run
+  findingBlocker: 4
+  findingMajor: 2
+  canaryMissed: 2
+  areaTrust: [2, 1, 0, -1] # by trust level 0..3
+
+tiers:
+  # score → tier
+  T1: 1
+  T2: 3
+  T3: 6
+
+# Floors that no score can lower. "The AI may not talk itself out of these."
+floors:
+  - { when: "untraced",            min: T2, why: "A change that serves no stated requirement needs a human to say why it is here." }
+  - { when: "publicApi",           min: T2, why: "Public API is a promise to users; a human owns promises." }
+  - { when: "securitySensitive",   min: T3, why: "Security-sensitive code is always read by its owner." }
+  - { when: "behaviourChangeOutsideRequirement", min: T2, why: "Behaviour changed that nobody asked for." }
+  - { when: "noProof",             min: T1, why: "T0 (skip) is only granted when a named proof replaces the read." }
+  - { when: "criticalityHigh",     min: T1, why: "High-criticality areas are never fully skipped." }
+
+reading:
+  readLinesPerMinute: 6
+  skimLinesPerMinute: 40
+  minutesPerDecision: 0.75
+  minutesPerFinding: 0.5
+
+# Deterministic supply-chain and sensitive-surface lens. Patterns are applied to added
+# diff lines only. `code` ignores comment-only lines; `literal` is used for secret-looking
+# strings, where a string is the thing being checked. A read rule floors its unit at T2.
+security:
+  rules:
+    - { id: "SEC-NETWORK", description: "network, socket or DNS access", pattern: '\\b(HttpClient|HttpRequestMessage|WebClient|TcpClient|UdpClient|Socket|Dns\\.|fetch\\s*\\(|axios\\b)', scope: code, route: read, points: 4 }
+    - { id: "SEC-FILESYSTEM", description: "file-system write or input-derived path", pattern: '\\b(File\\.(Write|Append|Create|Move|Copy|Delete)|FileStream|Directory\\.(Create|Move|Delete)|Path\\.(Combine|Join))\\b', scope: code, route: read, points: 4 }
+    - { id: "SEC-PROCESS", description: "process start or shell execution", pattern: '\\b(Process\\.Start|ProcessStartInfo|System\\.Diagnostics|child_process|execFile?\\s*\\()', scope: code, route: read, points: 4 }
+    - { id: "SEC-DYNAMIC", description: "reflection, dynamic code or eval", pattern: '(Reflection\\.|Activator\\.CreateInstance|Type\\.GetType|Assembly\\.Load|Reflection\\.Emit|\\beval\\s*\\(|\\bdynamic\\b)', scope: code, route: read, points: 4 }
+    - { id: "SEC-DESERIALIZE", description: "untrusted or polymorphic deserialisation", pattern: '(Deserialize(Type|<)|TypeNameHandling|Typeless|DynamicResolver|Polymorphic|JsonSerializer)', scope: code, route: read, points: 4 }
+    - { id: "SEC-UNSAFE", description: "unsafe, pointer, P/Invoke or raw memory", pattern: '(\\bunsafe\\b|\\b(sizeof|stackalloc)\\b|\\bIntPtr\\b|DllImport|Marshal\\.|Unsafe\\.|MemoryMarshal)', scope: code, route: read, points: 4 }
+    - { id: "SEC-CRYPTO", description: "cryptography or randomness", pattern: '(RandomNumberGenerator|System\\.Security\\.Cryptography|\\b(Aes|Hmac|SHA(1|256|384|512))\\b|\\bnew\\s+Random\\b)', scope: code, route: read, points: 4 }
+    - { id: "SEC-ENV", description: "environment, credential or secret access", pattern: '(Environment\\.GetEnvironmentVariable|Secret|Credential|ApiKey|AccessToken|Password)', scope: code, route: read, points: 4 }
+    - { id: "SEC-HARDCODED-SECRET", description: "hard-coded secret-looking literal", pattern: '(?i)(api[_-]?key|secret|password|token)\\s*[:=]\\s*(?:\\x22[^\\x22]{8,}\\x22|\\x27[^\\x27]{8,}\\x27)', scope: literal, route: read, points: 4 }
+    - { id: "SEC-ASSEMBLY", description: "assembly-level attribute or friend assembly", pattern: '^\\s*\\[assembly:|InternalsVisibleTo', scope: code, route: read, points: 4 }
+    - { id: "SEC-SUPPRESS", description: "warning or analyzer suppression", pattern: '(#pragma\\s+warning\\s+disable|NoWarn|SuppressMessage)', scope: code, route: read, points: 4 }
+    - { id: "SEC-GENERATED-TRUST", description: "generated code or source-generator trust boundary", pattern: '(GeneratedCode|SourceGenerator|SyntaxFactory|\\bEmit\\s*\\()', scope: code, route: read, points: 4 }
+
+# Trust is earned per area and withdrawn after escapes.
+trust:
+  labels: ["Probation", "Supervised", "Trusted", "Proven"]
+  effects:
+    - "Every unit is read by the owner; a second human co-signs."
+    - "Risk-routed reading; every skim unit is shown; 1 in 3 PRs gets a full-read spot check."
+    - "Risk-routed reading; 1 in 6 PRs gets a full-read spot check."
+    - "Proof-covered units are skipped; 1 in 10 PRs gets a full-read spot check."
+  promoteAtCleanStreak: [3, 8, 20]   # clean signed PRs needed to reach level 1, 2, 3
+  spotCheckRate: [1.0, 0.34, 0.17, 0.1]
+  onEscape: { demoteBy: 2, resetStreak: true }
+  onSpotCheckMiss: { demoteBy: 1, resetStreak: true }
+  cleanAfterDays: 14                 # a sign-off counts as clean only after this long with no revert or incident

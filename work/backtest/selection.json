@@ -1,0 +1,2726 @@
+{
+  "seed": 20261115,
+  "eligibleCount": 101,
+  "consideredCount": 226,
+  "selected": [
+    {
+      "additions": 224,
+      "baseRefName": "develop",
+      "baseRefOid": "0b85331f5436ec814750466052c38a567b7081ae",
+      "changedFiles": 7,
+      "deletions": 16,
+      "headRefOid": "b51cc1b2bf9cc464208cd2017320a9745a0de056",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "6e8f912751018cec0054b1c0b613aa6ab63e38d3"
+      },
+      "mergedAt": "2024-10-02T02:01:37Z",
+      "number": 1978,
+      "title": "Update DynamicAssembly usage to honor different AssemblyLoadContext's",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1978",
+      "mergeSha": "6e8f912751018cec0054b1c0b613aa6ab63e38d3",
+      "files": [
+        "sandbox/DynamicCodeDumper/DynamicCodeDumper.csproj",
+        "src/MessagePack/Internal/DynamicAssembly.cs",
+        "src/MessagePack/Internal/DynamicAssemblyFactory.cs",
+        "src/MessagePack/Resolvers/DynamicEnumResolver.cs",
+        "src/MessagePack/Resolvers/DynamicObjectResolver.cs",
+        "src/MessagePack/Resolvers/DynamicUnionResolver.cs",
+        "tests/MessagePack.Tests/AssemblyLoadContextTests.cs"
+      ],
+      "commitShas": [
+        "b6f4569bbb4018abc2600a026742eb10e48bead9",
+        "fe644c73ed10e4f62283c668ca3473fd1a3a773f",
+        "b51cc1b2bf9cc464208cd2017320a9745a0de056"
+      ],
+      "srcFiles": [
+        "src/MessagePack/Internal/DynamicAssembly.cs",
+        "src/MessagePack/Internal/DynamicAssemblyFactory.cs",
+        "src/MessagePack/Resolvers/DynamicEnumResolver.cs",
+        "src/MessagePack/Resolvers/DynamicObjectResolver.cs",
+        "src/MessagePack/Resolvers/DynamicUnionResolver.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 36,
+      "baseRefName": "develop",
+      "baseRefOid": "5e9e94d811562c7bb651bec0858652bb88fbdf09",
+      "changedFiles": 7,
+      "deletions": 12,
+      "headRefOid": "7a306bd7ab8de83c346212499ee698cd05f8116e",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "8168981489f1ae7ee2703e2dd55259857b67abf7"
+      },
+      "mergedAt": "2026-06-09T13:40:53Z",
+      "number": 2273,
+      "title": "Merge master into develop",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2273",
+      "mergeSha": "8168981489f1ae7ee2703e2dd55259857b67abf7",
+      "files": [
+        ".github/actions/setup-dotnet/action.yaml",
+        ".github/workflows/_create-release.yaml",
+        ".github/workflows/_update-packagejson.yaml",
+        ".github/workflows/build-release.yml",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/package.json",
+        "src/MessagePack/MessagePackSerializerOptions.cs",
+        "src/MessagePack/MessagePackWriter.cs"
+      ],
+      "commitShas": [
+        "9ee41c497cd5733386f5a3db86f3bcc740cc96a0",
+        "a48b40bdb62471e82913fe0b501862af99d9e603",
+        "56aee1ecf45ed0549649cda019c3143de3fb0f47",
+        "5b415b116b02968731e0282a69f3b0c1e4c635d7",
+        "cea945a48fe9f272c10fa5980e2702d5b2124c14",
+        "f13cb4781872eab0103a936116c31c52e48296eb",
+        "3a020c238ad98c9d737c7dee8b8c091097ebcec8",
+        "a77d92b7ce9c10c8c19c7ddfc02d9c1483eb6684",
+        "7a306bd7ab8de83c346212499ee698cd05f8116e"
+      ],
+      "srcFiles": [
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/package.json",
+        "src/MessagePack/MessagePackSerializerOptions.cs",
+        "src/MessagePack/MessagePackWriter.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 179,
+      "baseRefName": "master",
+      "baseRefOid": "44aa149acce1de32881e007f53fad0f3db7dfdab",
+      "changedFiles": 19,
+      "deletions": 203,
+      "headRefOid": "b6604c490597549113704024763a6127516590fb",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "55b4d1a12c51c698dd6a082e07b31c5d797d1398"
+      },
+      "mergedAt": "2025-08-17T18:45:09Z",
+      "number": 2206,
+      "title": "Remove unneeded GetTypeInfo() calls",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2206",
+      "mergeSha": "55b4d1a12c51c698dd6a082e07b31c5d797d1398",
+      "files": [
+        "src/MessagePack/Formatters/DynamicObjectTypeFallbackFormatter.cs",
+        "src/MessagePack/Formatters/EnumAsStringFormatter`1.cs",
+        "src/MessagePack/Formatters/PrimitiveObjectFormatter.cs",
+        "src/MessagePack/Formatters/TypelessFormatter.cs",
+        "src/MessagePack/Internal/DynamicAssemblyFactory.cs",
+        "src/MessagePack/Internal/ILGeneratorExtensions.cs",
+        "src/MessagePack/Internal/ReflectionExtensions.cs",
+        "src/MessagePack/Internal/Sequence`1.cs",
+        "src/MessagePack/MessagePackSecurity.cs",
+        "src/MessagePack/MessagePackSerializer.NonGeneric.cs",
+        "src/MessagePack/Resolvers/AttributeFormatterResolver.cs",
+        "src/MessagePack/Resolvers/DynamicEnumAsStringIgnoreCaseResolver.cs",
+        "src/MessagePack/Resolvers/DynamicEnumAsStringResolver.cs",
+        "src/MessagePack/Resolvers/DynamicEnumResolver.cs",
+        "src/MessagePack/Resolvers/DynamicGenericResolver.cs",
+        "src/MessagePack/Resolvers/DynamicObjectResolver.cs",
+        "src/MessagePack/Resolvers/DynamicUnionResolver.cs",
+        "src/MessagePack/Resolvers/ImmutableCollectionResolver.cs",
+        "src/MessagePack/Resolvers/SkipClrVisibilityChecks.cs"
+      ],
+      "commitShas": [
+        "931516c69d39ad4cd745d1512d32f9ad29c3bf03",
+        "45a93dc0f2681898cda91f2b6ccf9f1c79012b51",
+        "191c163a0be38e04e9cc939da959f3cc3ee01f51",
+        "99b417b5692208247bd12bb8b171bc3d789b4a35",
+        "b6604c490597549113704024763a6127516590fb"
+      ],
+      "srcFiles": [
+        "src/MessagePack/Formatters/DynamicObjectTypeFallbackFormatter.cs",
+        "src/MessagePack/Formatters/EnumAsStringFormatter`1.cs",
+        "src/MessagePack/Formatters/PrimitiveObjectFormatter.cs",
+        "src/MessagePack/Formatters/TypelessFormatter.cs",
+        "src/MessagePack/Internal/DynamicAssemblyFactory.cs",
+        "src/MessagePack/Internal/ILGeneratorExtensions.cs",
+        "src/MessagePack/Internal/ReflectionExtensions.cs",
+        "src/MessagePack/Internal/Sequence`1.cs",
+        "src/MessagePack/MessagePackSecurity.cs",
+        "src/MessagePack/MessagePackSerializer.NonGeneric.cs",
+        "src/MessagePack/Resolvers/AttributeFormatterResolver.cs",
+        "src/MessagePack/Resolvers/DynamicEnumAsStringIgnoreCaseResolver.cs",
+        "src/MessagePack/Resolvers/DynamicEnumAsStringResolver.cs",
+        "src/MessagePack/Resolvers/DynamicEnumResolver.cs",
+        "src/MessagePack/Resolvers/DynamicGenericResolver.cs",
+        "src/MessagePack/Resolvers/DynamicObjectResolver.cs",
+        "src/MessagePack/Resolvers/DynamicUnionResolver.cs",
+        "src/MessagePack/Resolvers/ImmutableCollectionResolver.cs",
+        "src/MessagePack/Resolvers/SkipClrVisibilityChecks.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 143,
+      "baseRefName": "master",
+      "baseRefOid": "528e6a7746d4185e0234e09231806b97e95c36bd",
+      "changedFiles": 15,
+      "deletions": 0,
+      "headRefOid": "a28f372c6aeaee497841b50c86fc945c87789bad",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "c52c51d7322bdf14e4a7d82bccf518966d60cbb6"
+      },
+      "mergedAt": "2025-01-27T07:47:23Z",
+      "number": 2136,
+      "title": "Add PreserveAttribute to generic formatters for Unity IL2CPP",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2136",
+      "mergeSha": "c52c51d7322bdf14e4a7d82bccf518966d60cbb6",
+      "files": [
+        "sandbox/DynamicCodeDumper/Program.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/IL2CPPTest.cs",
+        "src/MessagePack/Formatters/CollectionFormatter.cs",
+        "src/MessagePack/Formatters/DictionaryFormatter.cs",
+        "src/MessagePack/Formatters/EnumAsStringFormatter`1.cs",
+        "src/MessagePack/Formatters/GenericEnumFormatter`1.cs",
+        "src/MessagePack/Formatters/ImmutableCollectionFormatters.cs",
+        "src/MessagePack/Formatters/MultiDimensionalArrayFormatter.cs",
+        "src/MessagePack/Formatters/NullableFormatter.cs",
+        "src/MessagePack/Formatters/StandardClassLibraryFormatter.cs",
+        "src/MessagePack/Formatters/TupleFormatter.cs",
+        "src/MessagePack/Formatters/TupleFormatter.tt",
+        "src/MessagePack/Formatters/ValueTupleFormatter.cs",
+        "src/MessagePack/Formatters/ValueTupleFormatter.tt",
+        "src/MessagePack/Internal/PreserveAttribute.cs"
+      ],
+      "commitShas": [
+        "a28f372c6aeaee497841b50c86fc945c87789bad"
+      ],
+      "srcFiles": [
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/IL2CPPTest.cs",
+        "src/MessagePack/Formatters/CollectionFormatter.cs",
+        "src/MessagePack/Formatters/DictionaryFormatter.cs",
+        "src/MessagePack/Formatters/EnumAsStringFormatter`1.cs",
+        "src/MessagePack/Formatters/GenericEnumFormatter`1.cs",
+        "src/MessagePack/Formatters/ImmutableCollectionFormatters.cs",
+        "src/MessagePack/Formatters/MultiDimensionalArrayFormatter.cs",
+        "src/MessagePack/Formatters/NullableFormatter.cs",
+        "src/MessagePack/Formatters/StandardClassLibraryFormatter.cs",
+        "src/MessagePack/Formatters/TupleFormatter.cs",
+        "src/MessagePack/Formatters/TupleFormatter.tt",
+        "src/MessagePack/Formatters/ValueTupleFormatter.cs",
+        "src/MessagePack/Formatters/ValueTupleFormatter.tt",
+        "src/MessagePack/Internal/PreserveAttribute.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 128,
+      "baseRefName": "develop",
+      "baseRefOid": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+      "changedFiles": 5,
+      "deletions": 31,
+      "headRefOid": "e8eaa0ddd06b772d6be92616c70482bd521edc9e",
+      "labels": [
+        {
+          "id": "MDU6TGFiZWw1MzgwNzc5MDg=",
+          "name": "enhancement",
+          "description": "",
+          "color": "84b6eb"
+        },
+        {
+          "id": "LA_kwDOBN-3M88AAAABi_VxUQ",
+          "name": "analyzer",
+          "description": "",
+          "color": "0114AA"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "557e494ef9d2d98ed4144edba8d520062659df3d"
+      },
+      "mergedAt": "2024-07-22T22:14:41Z",
+      "number": 1898,
+      "title": "Offer code fix to ignore unattribute members of MessagePackObject types",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1898",
+      "mergeSha": "557e494ef9d2d98ed4144edba8d520062659df3d",
+      "files": [
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+        "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MessagePackAnalyzerTests.cs"
+      ],
+      "commitShas": [
+        "8b273ba969b6a9e2a0fa87d9bdf9c0eab29f9d31",
+        "e8eaa0ddd06b772d6be92616c70482bd521edc9e"
+      ],
+      "srcFiles": [
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+        "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 9
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 14
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 19
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 24
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 115
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 117
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 118
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0a74aaa778f93fa49d8815be97b9d5a978ebc1bf",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 124
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 123
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 175
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "d3208d90b90266627213fd4dfd47914faea4a3ea",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 11
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "57d9df89110866a22898425131c70fa2aa432a63",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 56
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "5173edaab4e7d73ac8185206fafef0989ee25122",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 261
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1873,
+          "prTitle": "Fix some source generator issues",
+          "line": 782
+        },
+        {
+          "fixPr": 1898,
+          "fixTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "dcb2801d561f0b7c896b7f93eccf86c77b39c7e8",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1873,
+          "prTitle": "Fix some source generator issues",
+          "line": 884
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 151,
+      "baseRefName": "develop",
+      "baseRefOid": "168179ef9aba18a16a12df932a9cb818cc545377",
+      "changedFiles": 8,
+      "deletions": 21,
+      "headRefOid": "c012263fe5ad699537a64823405ff6914ce0a7a7",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "ab4a3bb5302a5467bba99d6de4b22fb8cee196a6"
+      },
+      "mergedAt": "2024-10-23T13:54:41Z",
+      "number": 2036,
+      "title": "Avoid crashing with stack overflow on recursive generic type parameter constraints",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2036",
+      "mergeSha": "ab4a3bb5302a5467bba99d6de4b22fb8cee196a6",
+      "files": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CodeAnalysisUtilities.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/GenericTypeParameterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedNamedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "tests/MessagePack.SourceGenerator.Tests/GenericsFormatterTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/RecursiveGenerics_Direct/Formatters.MessagePack.GeneratedMessagePackResolver.AFormatter`1.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/RecursiveGenerics_Direct/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "c012263fe5ad699537a64823405ff6914ce0a7a7"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CodeAnalysisUtilities.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/GenericTypeParameterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedNamedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 404,
+      "baseRefName": "develop",
+      "baseRefOid": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+      "changedFiles": 7,
+      "deletions": 21,
+      "headRefOid": "eca5313183b329fa52d1a7fbfe19aefc223c7683",
+      "labels": [
+        {
+          "id": "MDU6TGFiZWwxNzE5MDcxODQ1",
+          "name": "source generation",
+          "description": "",
+          "color": "fbca04"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "4788d1af88f2e8b3054fafd6e155a723bed53bba"
+      },
+      "mergedAt": "2024-07-27T00:12:50Z",
+      "number": 1905,
+      "title": "Fix and improve generated formatters",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1905",
+      "mergeSha": "4788d1af88f2e8b3054fafd6e155a723bed53bba",
+      "files": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "tests/MessagePack.SourceGenerator.Tests/GenerationTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/DeserializingConstructorParameterMemberTypeAssignability_Incompatible/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/DeserializingConstructorParameterMemberTypeAssignability_MemberAssignsToParamType/Formatters.MessagePack.GeneratedMessagePackResolver.AFormatter.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/DeserializingConstructorParameterMemberTypeAssignability_MemberAssignsToParamType/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/NonDefaultDeserializingConstructor_Private/Formatters.A.AFormatter.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/NonDefaultDeserializingConstructor_Private/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "474188409be12495e18cbcc5c2cc8e7f4efbe991",
+        "eca5313183b329fa52d1a7fbfe19aefc223c7683"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "7a74a25bad0c947d219ef5b05713379dc7acb10a",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 10
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 656
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 708
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 728
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 830
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 840
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 917
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 927
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 937
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 936
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 940
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 949
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 950
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 955
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "c07dc04a0fe3fc4c000e302e77424b181436acba",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 957
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 964
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 967
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 969
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 971
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 981
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 994
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 1001
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 1008
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 1022
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 1030
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 1038
+        },
+        {
+          "fixPr": 1905,
+          "fixTitle": "Fix and improve generated formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "6522b9ea066a0b5bb62e8f5a4d7796c1ddaca026",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1898,
+          "prTitle": "Offer code fix to ignore unattribute members of MessagePackObject types",
+          "line": 1105
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 121,
+      "baseRefName": "develop",
+      "baseRefOid": "4788d1af88f2e8b3054fafd6e155a723bed53bba",
+      "changedFiles": 6,
+      "deletions": 5,
+      "headRefOid": "51f737c7e518282d432af63cef15d9587210b739",
+      "labels": [
+        {
+          "id": "MDU6TGFiZWwxNzE5MDcxODQ1",
+          "name": "source generation",
+          "description": "",
+          "color": "fbca04"
+        },
+        {
+          "id": "LA_kwDOBN-3M88AAAABi_VxUQ",
+          "name": "analyzer",
+          "description": "",
+          "color": "0114AA"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27"
+      },
+      "mergedAt": "2024-07-29T17:11:56Z",
+      "number": 1907,
+      "title": "Honor `ExcludeFormatterFromSourceGeneratedResolverAttribute` by suppressing certain warnings",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1907",
+      "mergeSha": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+      "files": [
+        "sandbox/DynamicCodeDumper/DynamicCodeDumper.csproj",
+        "sandbox/SharedData/Class1.cs",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+        "tests/MessagePack.SourceGenerator.Tests/ImplicitResolverForCustomFormattersTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/MultipleFunctionalCustomFormattersForType_OnlyOneNonExcluded/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "266fad78ed2783c5fedd84b2107d6c7225956d83",
+        "4ab383c2151e46d95c878d42aed83df03e87b061",
+        "51f737c7e518282d432af63cef15d9587210b739"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 143,
+      "baseRefName": "develop",
+      "baseRefOid": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+      "changedFiles": 6,
+      "deletions": 20,
+      "headRefOid": "0c9acdae8b38496b376c59a7cb32aef139d2983f",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "b0d66fab0d61b8ee31530af8f69376525baf5654"
+      },
+      "mergedAt": "2024-07-30T18:27:24Z",
+      "number": 1910,
+      "title": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1910",
+      "mergeSha": "b0d66fab0d61b8ee31530af8f69376525baf5654",
+      "files": [
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/FormatterCodeFixProvider.cs",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/Properties/AssemblyInfo.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MsgPack011PartialTypeRequiredTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/PrivateMemberAccessTests.cs"
+      ],
+      "commitShas": [
+        "0c9acdae8b38496b376c59a7cb32aef139d2983f"
+      ],
+      "srcFiles": [
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/FormatterCodeFixProvider.cs",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/Properties/AssemblyInfo.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/FormatterCodeFixProvider.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "052f2da37fd381efd180e06cb6c7837dd224f702",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 2
+        },
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/FormatterCodeFixProvider.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "052f2da37fd381efd180e06cb6c7837dd224f702",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 78
+        },
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/FormatterCodeFixProvider.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "052f2da37fd381efd180e06cb6c7837dd224f702",
+          "pr": 1893,
+          "prTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "line": 146
+        },
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "a594c410023b0fff1ae83195ff9cb0dd6a0abf57",
+          "pr": 1907,
+          "prTitle": "Honor `ExcludeFormatterFromSourceGeneratedResolverAttribute` by suppressing certain warnings",
+          "line": 28
+        },
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1907,
+          "prTitle": "Honor `ExcludeFormatterFromSourceGeneratedResolverAttribute` by suppressing certain warnings",
+          "line": 27
+        },
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1907,
+          "prTitle": "Honor `ExcludeFormatterFromSourceGeneratedResolverAttribute` by suppressing certain warnings",
+          "line": 242
+        },
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "6fa30a0daad92f997253c7f297a1dc7356c8723a",
+          "pr": 1905,
+          "prTitle": "Fix and improve generated formatters",
+          "line": 1096
+        },
+        {
+          "fixPr": 1910,
+          "fixTitle": "Fix diagnostic and code fix for MsgPack011 on nesting types",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "2b3779b5d3a6032c372dc6fd1b7e85c6efe4bf27",
+          "introducing": "6fa30a0daad92f997253c7f297a1dc7356c8723a",
+          "pr": 1905,
+          "prTitle": "Fix and improve generated formatters",
+          "line": 1098
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 312,
+      "baseRefName": "develop",
+      "baseRefOid": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+      "changedFiles": 18,
+      "deletions": 72,
+      "headRefOid": "2a90b70093191a85d658ba5eb482a97b25dc2c16",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "ceab2d78ccc76e11a361c7e2c4358d4aff52154d"
+      },
+      "mergedAt": "2024-06-21T17:31:41Z",
+      "number": 1850,
+      "title": "Fix handling of formatters following the singleton pattern",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1850",
+      "mergeSha": "ceab2d78ccc76e11a361c7e2c4358d4aff52154d",
+      "files": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CustomFormatterRegisterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/MemberSerializationInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "src/MessagePack.SourceGenerator/Transforms/GeneratorUtilities.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt",
+        "src/MessagePack.SourceGenerator/Utils/AnalyzerUtilities.cs",
+        "tests/MessagePack.SourceGenerator.Tests/GenerationTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/CustomFormatterWithSingletonPattern/Formatters.MessagePack.GeneratedMessagePackResolver.GFormatter.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/CustomFormatterWithSingletonPattern/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/SpecifyFormatterFromStockSet/Formatters.MessagePack.GeneratedMessagePackResolver.GFormatter.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/SpecifyFormatterFromStockSet/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "027eadf7331a1eefd93f678c6d16302a7cffb586",
+        "adf26316e307061efac51a34da2f9f4b0f84980b",
+        "2a90b70093191a85d658ba5eb482a97b25dc2c16"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CustomFormatterRegisterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/MemberSerializationInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "src/MessagePack.SourceGenerator/Transforms/GeneratorUtilities.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt",
+        "src/MessagePack.SourceGenerator/Utils/AnalyzerUtilities.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 57
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 59
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 67
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 69
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 290
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "79f5323f35392d78d25c26c3f6851f6c40a4378e",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 306
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 329
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 335
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 344
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 349
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "7c62679cb692ed46f3652c821da9e46f1ed3dfed",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 20
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "7c62679cb692ed46f3652c821da9e46f1ed3dfed",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 32
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "7c62679cb692ed46f3652c821da9e46f1ed3dfed",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 40
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "7c62679cb692ed46f3652c821da9e46f1ed3dfed",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 42
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "7c62679cb692ed46f3652c821da9e46f1ed3dfed",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 61
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "7c62679cb692ed46f3652c821da9e46f1ed3dfed",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 65
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "79f5323f35392d78d25c26c3f6851f6c40a4378e",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 84
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 93
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "cc93b6a0b1ab7aff858cd32b3afea0988af5be34",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 110
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 164
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 167
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 169
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 181
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 183
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 186
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "e816f173f265fa2d1cea59e560da112cf142321d",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 203
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "e816f173f265fa2d1cea59e560da112cf142321d",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 205
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/CustomFormatterRegisterInfo.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 8
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 648
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 678
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 679
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "18a0ad3e5ec817767eda76e100490aa9d10b357c",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 682
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 698
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 699
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "18a0ad3e5ec817767eda76e100490aa9d10b357c",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 701
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 743
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 801
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 811
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 850
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 888
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 898
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "b7046d6ec8b7ffffd73ba0c6eb31ea177022e385",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 35
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "cc93b6a0b1ab7aff858cd32b3afea0988af5be34",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 52
+        },
+        {
+          "fixPr": 1850,
+          "fixTitle": "Fix handling of formatters following the singleton pattern",
+          "path": "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+          "fixParent": "86d069b2314a6f548c33e8f6fba7b5fcc2d22077",
+          "introducing": "cc93b6a0b1ab7aff858cd32b3afea0988af5be34",
+          "pr": 1824,
+          "prTitle": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+          "line": 55
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 408,
+      "baseRefName": "develop",
+      "baseRefOid": "85c44d648799d6ccaee10489136ec504754f9a10",
+      "changedFiles": 9,
+      "deletions": 31,
+      "headRefOid": "9929d2143d1eee98f1d893a31d66d7f828c3f9bf",
+      "labels": [
+        {
+          "id": "LA_kwDOBN-3M88AAAABi_VxUQ",
+          "name": "analyzer",
+          "description": "",
+          "color": "0114AA"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "4ede6d3e210034693ce91a22b1db7f69f3de9049"
+      },
+      "mergedAt": "2024-10-15T22:57:00Z",
+      "number": 2003,
+      "title": "Add analyzers to help recognize breaking changes",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2003",
+      "mergeSha": "4ede6d3e210034693ce91a22b1db7f69f3de9049",
+      "files": [
+        "doc/analyzers/MsgPack016.md",
+        "doc/analyzers/MsgPack017.md",
+        "doc/analyzers/index.md",
+        "doc/migrating_v2-v3.md",
+        "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/Utils/RoslynAnalyzerExtensions.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MsgPack00xAnalyzerTests.cs"
+      ],
+      "commitShas": [
+        "41b9a4adaf3fd266d9aa21681788a28cef1d686d",
+        "9929d2143d1eee98f1d893a31d66d7f828c3f9bf"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/Utils/RoslynAnalyzerExtensions.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 229,
+      "baseRefName": "develop",
+      "baseRefOid": "b06681eaafee88475f2b2c958397eb540dad9d0e",
+      "changedFiles": 8,
+      "deletions": 6,
+      "headRefOid": "cf7e5ca4f5a7363a3039964c9b190465f8ef3deb",
+      "labels": [
+        {
+          "id": "MDU6TGFiZWw1MzgwNzc5MDg=",
+          "name": "enhancement",
+          "description": "",
+          "color": "84b6eb"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "361fb4bf117243db41894c4d97cdd4a45ec63d90"
+      },
+      "mergedAt": "2024-08-22T14:02:11Z",
+      "number": 1936,
+      "title": "Add ignore case option to EnumAsStringFormatter",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1936",
+      "mergeSha": "361fb4bf117243db41894c4d97cdd4a45ec63d90",
+      "files": [
+        "src/MessagePack/Formatters/EnumAsStringFormatter`1.cs",
+        "src/MessagePack/Resolvers/DynamicEnumAsStringIgnoreCaseResolver.cs",
+        "src/MessagePack/net472/PublicAPI.Unshipped.txt",
+        "src/MessagePack/net6.0/PublicAPI.Unshipped.txt",
+        "src/MessagePack/net8.0/PublicAPI.Unshipped.txt",
+        "src/MessagePack/netstandard2.0/PublicAPI.Unshipped.txt",
+        "src/MessagePack/netstandard2.1/PublicAPI.Unshipped.txt",
+        "tests/MessagePack.Tests/EnumAsStringIgnoreCaseTests.cs"
+      ],
+      "commitShas": [
+        "2baedaa8780e92bae69ab141de376eda8ef559f4",
+        "184ffc47037d492f9bf1d6e97a92eaa87049b193",
+        "cf7e5ca4f5a7363a3039964c9b190465f8ef3deb"
+      ],
+      "srcFiles": [
+        "src/MessagePack/Formatters/EnumAsStringFormatter`1.cs",
+        "src/MessagePack/Resolvers/DynamicEnumAsStringIgnoreCaseResolver.cs",
+        "src/MessagePack/net472/PublicAPI.Unshipped.txt",
+        "src/MessagePack/net6.0/PublicAPI.Unshipped.txt",
+        "src/MessagePack/net8.0/PublicAPI.Unshipped.txt",
+        "src/MessagePack/netstandard2.0/PublicAPI.Unshipped.txt",
+        "src/MessagePack/netstandard2.1/PublicAPI.Unshipped.txt"
+      ],
+      "szz": [],
+      "kind": "control"
+    },
+    {
+      "additions": 19,
+      "baseRefName": "develop",
+      "baseRefOid": "9be35840b831fae041e6cf8acc864ec34e4b7d50",
+      "changedFiles": 5,
+      "deletions": 10,
+      "headRefOid": "e710178f658dd0eed35658cf70f8e4a3aadf8bf7",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "c1585ad7738eda6775d8a0a031350fdb887fbf6e"
+      },
+      "mergedAt": "2024-10-18T12:45:35Z",
+      "number": 2013,
+      "title": "Secure by default",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2013",
+      "mergeSha": "c1585ad7738eda6775d8a0a031350fdb887fbf6e",
+      "files": [
+        "README.md",
+        "doc/migrating_v2-v3.md",
+        "src/MessagePack/MessagePackSerializerOptions.cs",
+        "tests/MessagePack.Tests/ExtensionTests/FrozenCollectionTest.cs",
+        "tests/MessagePack.Tests/MessagePackSerializerOptionsTests.cs"
+      ],
+      "commitShas": [
+        "e710178f658dd0eed35658cf70f8e4a3aadf8bf7"
+      ],
+      "srcFiles": [
+        "src/MessagePack/MessagePackSerializerOptions.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 17,
+      "baseRefName": "v1.x",
+      "baseRefOid": "4142e346ead283997c46f7257f36a3037177bccf",
+      "changedFiles": 12,
+      "deletions": 20,
+      "headRefOid": "99f4dec914e7b0a6611e5cf0241cdcdef08e8741",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "cc28ef8dee65796ec8ccfb6f0ac430a19cb1e172"
+      },
+      "mergedAt": "2024-10-16T22:35:05Z",
+      "number": 2011,
+      "title": "Fix `float` hash generation",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2011",
+      "mergeSha": "cc28ef8dee65796ec8ccfb6f0ac430a19cb1e172",
+      "files": [
+        "Directory.Build.props",
+        "azure-pipelines.yml",
+        "azure-pipelines/build.yml",
+        "benchmark/SerializerBenchmark/SerializerBenchmark.csproj",
+        "global.json",
+        "sandbox/PerfNetFramework/PerfNetFramework.csproj",
+        "sandbox/Sandbox/Sandbox.csproj",
+        "src/MessagePack.UniversalCodeGenerator/MessagePack.UniversalCodeGenerator.csproj",
+        "src/MessagePack/MessagePackSecurity.cs",
+        "src/MessagePackAnalyzer/MessagePackAnalyzer.csproj",
+        "tests/MessagePack.AspNetCoreMvcFormatter.Tests/MessagePack.AspNetCoreMvcFormatter.Tests.csproj",
+        "tests/MessagePack.Tests/MessagePack.Tests.csproj"
+      ],
+      "commitShas": [
+        "e6bbe502f74522379883960feba84a4b22d7542c",
+        "99f4dec914e7b0a6611e5cf0241cdcdef08e8741"
+      ],
+      "srcFiles": [
+        "src/MessagePack.UniversalCodeGenerator/MessagePack.UniversalCodeGenerator.csproj",
+        "src/MessagePack/MessagePackSecurity.cs",
+        "src/MessagePackAnalyzer/MessagePackAnalyzer.csproj"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 18,
+      "baseRefName": "master",
+      "baseRefOid": "84db9f79e3ecc5f4e8b7c7f77cd15d7745f5f2a7",
+      "changedFiles": 1,
+      "deletions": 4,
+      "headRefOid": "cfbb57333b051bb9eba0ef9dee50432a4ce41590",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "781513b17086e9ac548428dfc83737793f094d30"
+      },
+      "mergedAt": "2026-07-08T20:55:40Z",
+      "number": 2258,
+      "title": "perf: drop redundant char* fixed in MessagePackWriter.Write(string)",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2258",
+      "mergeSha": "781513b17086e9ac548428dfc83737793f094d30",
+      "files": [
+        "src/MessagePack/MessagePackWriter.cs"
+      ],
+      "commitShas": [
+        "20a17a80f7e3d34b5249ae17ec7893db69c48e94",
+        "2007d22fe94667ee09ee05977bf2d9d486455bb8",
+        "cfbb57333b051bb9eba0ef9dee50432a4ce41590"
+      ],
+      "srcFiles": [
+        "src/MessagePack/MessagePackWriter.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 2258,
+          "fixTitle": "perf: drop redundant char* fixed in MessagePackWriter.Write(string)",
+          "path": "src/MessagePack/MessagePackWriter.cs",
+          "fixParent": "2fb31064faf7bbcf0698c93327383bff5e20d39c",
+          "introducing": "449c86899fdc8bd13caa0ad75d19dc35def399e2",
+          "pr": 2273,
+          "prTitle": "Merge master into develop",
+          "line": 594
+        },
+        {
+          "fixPr": 2258,
+          "fixTitle": "perf: drop redundant char* fixed in MessagePackWriter.Write(string)",
+          "path": "src/MessagePack/MessagePackWriter.cs",
+          "fixParent": "2fb31064faf7bbcf0698c93327383bff5e20d39c",
+          "introducing": "449c86899fdc8bd13caa0ad75d19dc35def399e2",
+          "pr": 2273,
+          "prTitle": "Merge master into develop",
+          "line": 597
+        },
+        {
+          "fixPr": 2258,
+          "fixTitle": "perf: drop redundant char* fixed in MessagePackWriter.Write(string)",
+          "path": "src/MessagePack/MessagePackWriter.cs",
+          "fixParent": "2fb31064faf7bbcf0698c93327383bff5e20d39c",
+          "introducing": "449c86899fdc8bd13caa0ad75d19dc35def399e2",
+          "pr": 2273,
+          "prTitle": "Merge master into develop",
+          "line": 613
+        },
+        {
+          "fixPr": 2258,
+          "fixTitle": "perf: drop redundant char* fixed in MessagePackWriter.Write(string)",
+          "path": "src/MessagePack/MessagePackWriter.cs",
+          "fixParent": "2fb31064faf7bbcf0698c93327383bff5e20d39c",
+          "introducing": "449c86899fdc8bd13caa0ad75d19dc35def399e2",
+          "pr": 2273,
+          "prTitle": "Merge master into develop",
+          "line": 616
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 198,
+      "baseRefName": "develop",
+      "baseRefOid": "4b4f92f41114bcc79d32adbbdf18c3f05f48a1c9",
+      "changedFiles": 13,
+      "deletions": 90,
+      "headRefOid": "568fdd5c8556ebadde0ec154a1a1c419ed67e0cc",
+      "labels": [
+        {
+          "id": "MDU6TGFiZWwxNzE5MDcxODQ1",
+          "name": "source generation",
+          "description": "",
+          "color": "fbca04"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "19022e91809f03ceaddea95c1fd937f1e78a48a7"
+      },
+      "mergedAt": "2024-10-02T17:15:26Z",
+      "number": 1980,
+      "title": "Add AOT formatter support for init properties and required members",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1980",
+      "mergeSha": "19022e91809f03ceaddea95c1fd937f1e78a48a7",
+      "files": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/MemberSerializationInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterDeserializeHelper.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt",
+        "tests/MessagePack.SourceGenerator.ExecutionTests/ExecutionTests.cs",
+        "tests/MessagePack.SourceGenerator.ExecutionTests/HasInitProperty.cs",
+        "tests/MessagePack.SourceGenerator.ExecutionTests/HasPropertiesWithGetterAndCtor.cs",
+        "tests/MessagePack.SourceGenerator.ExecutionTests/HasRequiredMembers.cs",
+        "tests/MessagePack.SourceGenerator.Tests/CodeAnalysis/MemberSerializationInfoTests.cs"
+      ],
+      "commitShas": [
+        "8b1c365a58302ae576458b983c1d09115e152114",
+        "568fdd5c8556ebadde0ec154a1a1c419ed67e0cc"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/MemberSerializationInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/ObjectSerializationInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/FormatterTemplate.tt",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterDeserializeHelper.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/StringKey/StringKeyFormatterTemplate.tt"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 269,
+      "baseRefName": "develop",
+      "baseRefOid": "caed65bc31d5d83190bf30a6a62beaf29b1abf05",
+      "changedFiles": 15,
+      "deletions": 45,
+      "headRefOid": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "301b06f629f051763bc94d08a4ad11db0da5a1c9"
+      },
+      "mergedAt": "2024-05-16T21:01:37Z",
+      "number": 1818,
+      "title": "Fix source generator handling of inaccessible custom formatters",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1818",
+      "mergeSha": "301b06f629f051763bc94d08a4ad11db0da5a1c9",
+      "files": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CodeAnalysisUtilities.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CustomFormatterRegisterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/ResolverRegisterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "src/MessagePack.SourceGenerator/Transforms/ResolverTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/ResolverTemplate.tt",
+        "tests/MessagePack.SourceGenerator.ExecutionTests/CustomFormatterRecordFormatter.cs",
+        "tests/MessagePack.SourceGenerator.ExecutionTests/InaccessibleFormatter.cs",
+        "tests/MessagePack.SourceGenerator.Tests/GenerationTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/ImplicitResolverForCustomFormattersTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MsgPack010InaccessibleFormatterTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/CustomFormatterWithSingletonPattern/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "0dc68d79de8777b333ffd83e31e4e892b9d93548"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CodeAnalysisUtilities.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CustomFormatterRegisterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/ResolverRegisterInfo.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "src/MessagePack.SourceGenerator/Transforms/ResolverTemplate.cs",
+        "src/MessagePack.SourceGenerator/Transforms/ResolverTemplate.tt"
+      ],
+      "szz": [
+        {
+          "fixPr": 1818,
+          "fixTitle": "Fix source generator handling of inaccessible custom formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "caed65bc31d5d83190bf30a6a62beaf29b1abf05",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1798,
+          "prTitle": "Fix source generated formatters for records with string keys",
+          "line": 303
+        },
+        {
+          "fixPr": 1818,
+          "fixTitle": "Fix source generator handling of inaccessible custom formatters",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "caed65bc31d5d83190bf30a6a62beaf29b1abf05",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1798,
+          "prTitle": "Fix source generated formatters for records with string keys",
+          "line": 1190
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 169,
+      "baseRefName": "develop",
+      "baseRefOid": "ab4a3bb5302a5467bba99d6de4b22fb8cee196a6",
+      "changedFiles": 4,
+      "deletions": 1,
+      "headRefOid": "9312f251685580492ed06a11d5b4db1433508ca6",
+      "labels": [
+        {
+          "id": "LA_kwDOBN-3M88AAAABi_VxUQ",
+          "name": "analyzer",
+          "description": "",
+          "color": "0114AA"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "15caf64f526347e7ff3a76786304e46d39b87d27"
+      },
+      "mergedAt": "2024-10-25T02:40:19Z",
+      "number": 2037,
+      "title": "Fix mis-fire of `MsgPack003` on use of `Collection<T>`",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2037",
+      "mergeSha": "15caf64f526347e7ff3a76786304e46d39b87d27",
+      "files": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "tests/MessagePack.SourceGenerator.Tests/GenerationTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/SystemCollectionsObjectModelCollection/Formatters.MessagePack.GeneratedMessagePackResolver.AFormatter.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/SystemCollectionsObjectModelCollection/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "9312f251685580492ed06a11d5b4db1433508ca6"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 2037,
+          "fixTitle": "Fix mis-fire of `MsgPack003` on use of `Collection<T>`",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "ac4653418a33a01a41158eed0705d70f24a8ebfb",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 2036,
+          "prTitle": "Avoid crashing with stack overflow on recursive generic type parameter constraints",
+          "line": 544
+        },
+        {
+          "fixPr": 2037,
+          "fixTitle": "Fix mis-fire of `MsgPack003` on use of `Collection<T>`",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "ac4653418a33a01a41158eed0705d70f24a8ebfb",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 2036,
+          "prTitle": "Avoid crashing with stack overflow on recursive generic type parameter constraints",
+          "line": 610
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 163,
+      "baseRefName": "develop",
+      "baseRefOid": "ef03d4d15bacb62704fade11eb19f7b06a2b1467",
+      "changedFiles": 12,
+      "deletions": 94,
+      "headRefOid": "d7fc512244256f994385d08566232455201fe645",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "2dd90d3d5569f685a201849829d9a7c1fb4ad852"
+      },
+      "mergedAt": "2024-07-17T16:39:03Z",
+      "number": 1873,
+      "title": "Fix some source generator issues",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1873",
+      "mergeSha": "2dd90d3d5569f685a201849829d9a7c1fb4ad852",
+      "files": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/CompositeResolverGenerator.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/GenericsOfT1T2Formatter/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/GenericsOfTFormatter/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/GenericsOfTFormatter_WithKnownTypes/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/GenericsUnionFormatter/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/GenericsUnionFormatter_Nested/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/Generics_Defined_In_ReferencedProject/TestProject.MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/NestedGenericTypes/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/NullableFormatter/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/WellKnownGenericsFormatter/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "6150b6996ef8a6f4b60284c1c8ddd37fef2aeaad",
+        "d7fc512244256f994385d08566232455201fe645"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/CompositeResolverGenerator.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1850,
+          "prTitle": "Fix handling of formatters following the singleton pattern",
+          "line": 227
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1850,
+          "prTitle": "Fix handling of formatters following the singleton pattern",
+          "line": 264
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/QualifiedTypeName.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1850,
+          "prTitle": "Fix handling of formatters following the singleton pattern",
+          "line": 278
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 190
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "e9ce2d60c6cb88dec2b9552287443933b3510f71",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 207
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "e9ce2d60c6cb88dec2b9552287443933b3510f71",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 426
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 425
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "be84d72b1de46fbd99c824e3ccd0184dc55a2fba",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 428
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 434
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 436
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 439
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 441
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "ac5188af957cdfe95896cc921654912714c57588",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 496
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 520
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 521
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 523
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 522
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 525
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 537
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 538
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 541
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "30d43af0e610c644fac24ea688738a747b662c98",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 540
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 544
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 602
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 601
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "267ba7fa71eaf7c2df8e71f8dbbbd9cae94c5b30",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 1210
+        },
+        {
+          "fixPr": 1873,
+          "fixTitle": "Fix some source generator issues",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+          "fixParent": "7896a6d4e8ed9744874e22ddd657105e8773501d",
+          "introducing": "e9ce2d60c6cb88dec2b9552287443933b3510f71",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 1212
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 57,
+      "baseRefName": "develop",
+      "baseRefOid": "31b261c810c1c27b62462373627ad6ed599c0bd8",
+      "changedFiles": 1,
+      "deletions": 20,
+      "headRefOid": "13677dee4c85882187c725a02fc478402abf0aca",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d"
+      },
+      "mergedAt": "2024-07-21T14:03:30Z",
+      "number": 1894,
+      "title": "Fix UnsafeBlitFormatter for the case of endianess mismatch",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1894",
+      "mergeSha": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+      "files": [
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Extension/UnsafeBlitFormatter.cs"
+      ],
+      "commitShas": [
+        "4dd3e33418bd0e33407188f73767ffc195cc634b",
+        "13677dee4c85882187c725a02fc478402abf0aca"
+      ],
+      "srcFiles": [
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Extension/UnsafeBlitFormatter.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 346,
+      "baseRefName": "develop",
+      "baseRefOid": "b7be200180fb06ccee8327d24f10503206114c75",
+      "changedFiles": 6,
+      "deletions": 1,
+      "headRefOid": "6bd14277be42f8bcfc78bc8728123c86c21022c4",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "c07dc04a0fe3fc4c000e302e77424b181436acba"
+      },
+      "mergedAt": "2024-04-13T15:37:09Z",
+      "number": 1798,
+      "title": "Fix source generated formatters for records with string keys",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1798",
+      "mergeSha": "c07dc04a0fe3fc4c000e302e77424b181436acba",
+      "files": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "tests/MessagePack.SourceGenerator.Tests/CustomStringKeyFormatterTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/RecordWithPrimaryConstructor/Formatters.TempProject.MyMessagePackObjectFormatter.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/RecordWithPrimaryConstructor/MessagePack.GeneratedMessagePackResolver.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/RecordWithWithInitOnlyProps/Formatters.TempProject.MyMessagePackObjectFormatter.g.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Resources/RecordWithWithInitOnlyProps/MessagePack.GeneratedMessagePackResolver.g.cs"
+      ],
+      "commitShas": [
+        "c7880fb06bbd2657171a1ebaa83dac4792e8b51f",
+        "e745677bab9ade678b48a6f9cb2cab48414e5fd4",
+        "0470ad5370ff1d1b07c7bc5617c67519b554667c",
+        "6bd14277be42f8bcfc78bc8728123c86c21022c4"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 74,
+      "baseRefName": "develop",
+      "baseRefOid": "6e73bf0649af5cf0cc4448276895e33650a7f215",
+      "changedFiles": 6,
+      "deletions": 1,
+      "headRefOid": "b7046d6ec8b7ffffd73ba0c6eb31ea177022e385",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "9794c75530f7facfdb49318f5d727764dd5f3a11"
+      },
+      "mergedAt": "2024-05-22T18:59:34Z",
+      "number": 1824,
+      "title": "Add `ExcludeFormatterFromSourceGeneratedResolverAttribute`",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1824",
+      "mergeSha": "9794c75530f7facfdb49318f5d727764dd5f3a11",
+      "files": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+        "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "src/MessagePack.SourceGenerator/Utils/Constants.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Annotations/AnalyzerAttributes.cs",
+        "tests/MessagePack.SourceGenerator.ExecutionTests/ExcludedCustomFormatter.cs",
+        "tests/MessagePack.SourceGenerator.Tests/GenerationTests.cs"
+      ],
+      "commitShas": [
+        "b7046d6ec8b7ffffd73ba0c6eb31ea177022e385"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/CodeAnalysis/AnalyzerOptions.cs",
+        "src/MessagePack.SourceGenerator/MessagePackGenerator.cs",
+        "src/MessagePack.SourceGenerator/Utils/Constants.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Annotations/AnalyzerAttributes.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 20,
+      "baseRefName": "develop",
+      "baseRefOid": "53734dc1cac468ab2ce5ef43bcb69992bb756185",
+      "changedFiles": 4,
+      "deletions": 18,
+      "headRefOid": "e13c1346398f87548f9b14edca9bc3f15085d6cf",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "76dc8cf82b6fd23e24ee2ed586602d20c8a84c29"
+      },
+      "mergedAt": "2024-10-07T21:51:35Z",
+      "number": 1987,
+      "title": "Reader/Writer touch-ups",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1987",
+      "mergeSha": "76dc8cf82b6fd23e24ee2ed586602d20c8a84c29",
+      "files": [
+        "src/MessagePack/BufferWriter.cs",
+        "src/MessagePack/MessagePackReader.cs",
+        "src/MessagePack/SequenceReader.cs",
+        "tests/MessagePack.Tests/MessagePackReaderTests.ReadInt.cs"
+      ],
+      "commitShas": [
+        "e13c1346398f87548f9b14edca9bc3f15085d6cf"
+      ],
+      "srcFiles": [
+        "src/MessagePack/BufferWriter.cs",
+        "src/MessagePack/MessagePackReader.cs",
+        "src/MessagePack/SequenceReader.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 263,
+      "baseRefName": "develop",
+      "baseRefOid": "e2b0dbde123bc56d454d32c2b183f17bc6242972",
+      "changedFiles": 31,
+      "deletions": 44,
+      "headRefOid": "cd97db9c37a6c6fd6054dc3979292227365c2be7",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "ccd64819fb30ecbf700e20e743a75c170457ed18"
+      },
+      "mergedAt": "2024-01-22T14:00:45Z",
+      "number": 1741,
+      "title": "Merge master to develop",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1741",
+      "mergeSha": "ccd64819fb30ecbf700e20e743a75c170457ed18",
+      "files": [
+        ".github/FUNDING.yml",
+        "README.md",
+        "src/MessagePack.UnityClient/.gitignore",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/MessagePackSerializer.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Resolvers/DynamicGenericResolver.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Resolvers/StandardResolver.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Resolvers/TypelessContractlessStandardResolver.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Unity/Editor.meta",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Unity/Editor/MessagePack.UnityEditor.asmdef",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Unity/Editor/MessagePack.UnityEditor.asmdef.meta",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Utilities.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/package.json",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/AllowPrivateTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/AnonymousTypeTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/ContractlessStandardResolverTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DataContractTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverConstructorTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverDerivedAttributeInheritanceTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverInterfaceTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverOrderTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverTests.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/EnumAsStringTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/GenericFormatters.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/MessagePackBinaryTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/MessagePackSerializerTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/NonGenericCollectionTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/ObjectResolverTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/OldSpecBinaryFormatterTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/PrimitiveResolverTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/PrimitivelikeFormatterTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/ValueTupleTest.cs"
+      ],
+      "commitShas": [
+        "6db8698e72cd034110174c2ecab7c8a04b8e98f7",
+        "a1a74173d698acbe493f3be7f24ecb36989e252a",
+        "55b46296f828928b85f7ef3c26a9546622e40d02",
+        "07237d86791ef5e38863aec60da59665e595b1ff",
+        "fe50eef36719f48a3f60efa6b3eb618892e0f90b",
+        "cf0b7d74ce7f2e29ed30f4df70114aa44fe514c3",
+        "ec99ca7a936ed740b1d980d444afc407627951c7",
+        "e9100a70515319789d0cbd9c6041d5003f60429a",
+        "6edce561fd56709c5ecc0d47a412a16fb91b81fa",
+        "d0768f3387561a94104c514931e081216fc3a242",
+        "4890328d2f7b5017e29c6e7accfc0ff5b8383027",
+        "0c7c7892748b0f494ab4a71d91c9445b242f7ec2",
+        "c26eda899ba77ed023d4980781851fa7b6b9a162",
+        "7dcea24d3dd6c6f3ead0a2e6352cc0b143340099",
+        "1a582ca624ddf4c30d0e515f63f0b38a46a8cd6e",
+        "f31cac3ed70ebfe300e63fea2dabe117dee4791b",
+        "d10d7f9369f36433ace3229f30d324504dfe197a",
+        "cffef3c1b0a6f198090c35ad3080a939ff53862e",
+        "d71dc812c10fe4f758a5caa481b9f637b4b31cac",
+        "415c592492cab80d52c8dac5a0cbb108317c610c",
+        "eefc9079d12c476f95a12ccb4c1a18bf0f9aa03c",
+        "bece0edf27b6b3e9b53109735e00127eff172436",
+        "cd97db9c37a6c6fd6054dc3979292227365c2be7"
+      ],
+      "srcFiles": [
+        "src/MessagePack.UnityClient/.gitignore",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/MessagePackSerializer.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Resolvers/DynamicGenericResolver.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Resolvers/StandardResolver.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Resolvers/TypelessContractlessStandardResolver.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Unity/Editor.meta",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Unity/Editor/MessagePack.UnityEditor.asmdef",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Unity/Editor/MessagePack.UnityEditor.asmdef.meta",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/Utilities.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/MessagePack/package.json",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/AllowPrivateTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/AnonymousTypeTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/ContractlessStandardResolverTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DataContractTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverConstructorTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverDerivedAttributeInheritanceTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverInterfaceTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverOrderTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/DynamicObjectResolverTests.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/EnumAsStringTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/GenericFormatters.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/MessagePackBinaryTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/MessagePackSerializerTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/NonGenericCollectionTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/ObjectResolverTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/OldSpecBinaryFormatterTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/PrimitiveResolverTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/PrimitivelikeFormatterTest.cs",
+        "src/MessagePack.UnityClient/Assets/Scripts/Tests/ShareTests/ValueTupleTest.cs"
+      ],
+      "szz": [],
+      "kind": "control"
+    },
+    {
+      "additions": 37,
+      "baseRefName": "develop",
+      "baseRefOid": "7280ce1aa61ca0c8309df6c10dfe96e6f6107b48",
+      "changedFiles": 2,
+      "deletions": 4,
+      "headRefOid": "47b03656d4013abc826dfa28a3e1e6090b365819",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "c75118f38eb2421097eaef861f740b728c52d7c3"
+      },
+      "mergedAt": "2024-06-06T01:59:48Z",
+      "number": 1842,
+      "title": "Preserve code comments when adding attributes to fields",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1842",
+      "mergeSha": "c75118f38eb2421097eaef861f740b728c52d7c3",
+      "files": [
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MessagePackAnalyzerTests.cs"
+      ],
+      "commitShas": [
+        "47b03656d4013abc826dfa28a3e1e6090b365819"
+      ],
+      "srcFiles": [
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 86,
+      "baseRefName": "master",
+      "baseRefOid": "c52c51d7322bdf14e4a7d82bccf518966d60cbb6",
+      "changedFiles": 5,
+      "deletions": 146,
+      "headRefOid": "ca95d843c09cee8add7bd39f6991fb704e89e3e6",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "e823ea1f98e9417004396061ef4334794bb5da3d"
+      },
+      "mergedAt": "2025-01-27T07:48:55Z",
+      "number": 2139,
+      "title": "Change ByteListFormatter behaviour to keep binary compatibility for List<byte>",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2139",
+      "mergeSha": "e823ea1f98e9417004396061ef4334794bb5da3d",
+      "files": [
+        "src/MessagePack/Formatters/CollectionFormatter.cs",
+        "src/MessagePack/Formatters/PrimitiveFormatter.cs",
+        "src/MessagePack/Formatters/PrimitiveFormatter.tt",
+        "src/MessagePack/Resolvers/BuiltinResolver.cs",
+        "tests/MessagePack.Tests/CollectionTest.cs"
+      ],
+      "commitShas": [
+        "51973d37c9ecf3133e10e1c9f7c41880800bd34c",
+        "99ad5e9091c89fcb39e339fb87bec1f5d0ddaa74",
+        "bea23374453a88360b7a7eb01d1c213066a516a0",
+        "ca95d843c09cee8add7bd39f6991fb704e89e3e6"
+      ],
+      "srcFiles": [
+        "src/MessagePack/Formatters/CollectionFormatter.cs",
+        "src/MessagePack/Formatters/PrimitiveFormatter.cs",
+        "src/MessagePack/Formatters/PrimitiveFormatter.tt",
+        "src/MessagePack/Resolvers/BuiltinResolver.cs"
+      ],
+      "szz": [],
+      "kind": "control"
+    },
+    {
+      "additions": 314,
+      "baseRefName": "develop",
+      "baseRefOid": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+      "changedFiles": 11,
+      "deletions": 85,
+      "headRefOid": "052f2da37fd381efd180e06cb6c7837dd224f702",
+      "labels": [
+        {
+          "id": "MDU6TGFiZWw1MzgwNzc5MDg=",
+          "name": "enhancement",
+          "description": "",
+          "color": "84b6eb"
+        },
+        {
+          "id": "LA_kwDOBN-3M88AAAABi_VxUQ",
+          "name": "analyzer",
+          "description": "",
+          "color": "0114AA"
+        }
+      ],
+      "mergeCommit": {
+        "oid": "07704c749fda854b71a9793ef7e563c5dddf9617"
+      },
+      "mergedAt": "2024-07-22T19:09:33Z",
+      "number": 1893,
+      "title": "Offer code fix for MsgPack011: `partial` modifier required",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1893",
+      "mergeSha": "07704c749fda854b71a9793ef7e563c5dddf9617",
+      "files": [
+        "sandbox/SharedData/Class1.cs",
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/FormatterCodeFixProvider.cs",
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+        "src/MessagePack.Analyzers.CodeFixes/Usings.cs",
+        "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CodeAnalysisUtilities.cs",
+        "tests/MessagePack.SourceGenerator.Tests/FormatterCodeFixProviderTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MsgPack010InaccessibleFormatterTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MsgPack011PartialTypeRequiredTests.cs",
+        "tests/MessagePack.SourceGenerator.Tests/Verifiers/CSharpCodeFixVerifier`2+Test.cs"
+      ],
+      "commitShas": [
+        "b8144ea395381386cda1b951ff68412691f482a4",
+        "052f2da37fd381efd180e06cb6c7837dd224f702"
+      ],
+      "srcFiles": [
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/FormatterCodeFixProvider.cs",
+        "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+        "src/MessagePack.Analyzers.CodeFixes/Usings.cs",
+        "src/MessagePack.SourceGenerator/AnalyzerReleases.Unshipped.md",
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/CodeAnalysisUtilities.cs"
+      ],
+      "szz": [
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "0b5e5d916fe6e820a02608710da70f94ff15c5ae",
+          "pr": 1842,
+          "prTitle": "Preserve code comments when adding attributes to fields",
+          "line": 4
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.Analyzers.CodeFixes/CodeFixes/MessagePackCodeFixProvider.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "0a74aaa778f93fa49d8815be97b9d5a978ebc1bf",
+          "pr": 1842,
+          "prTitle": "Preserve code comments when adding attributes to fields",
+          "line": 6
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "79f5323f35392d78d25c26c3f6851f6c40a4378e",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 21
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "01d63889b9f703a714132cb26d74af194d5fb829",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 22
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "79f5323f35392d78d25c26c3f6851f6c40a4378e",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 218
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 225
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 228
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "79f5323f35392d78d25c26c3f6851f6c40a4378e",
+          "pr": 1859,
+          "prTitle": "Report missing `[MessagePackObject]` attribute for generic types ",
+          "line": 235
+        },
+        {
+          "fixPr": 1893,
+          "fixTitle": "Offer code fix for MsgPack011: `partial` modifier required",
+          "path": "src/MessagePack.SourceGenerator/CodeAnalysis/CodeAnalysisUtilities.cs",
+          "fixParent": "aaf99a7e9807d24a9513a7c916fbf1ce8ed8971d",
+          "introducing": "0dc68d79de8777b333ffd83e31e4e892b9d93548",
+          "pr": 1818,
+          "prTitle": "Fix source generator handling of inaccessible custom formatters",
+          "line": 45
+        }
+      ],
+      "kind": "escaped"
+    },
+    {
+      "additions": 8,
+      "baseRefName": "master",
+      "baseRefOid": "b1df22f16991d17df77ba2f037b26fa44706987c",
+      "changedFiles": 3,
+      "deletions": 6,
+      "headRefOid": "66917838e636c803d4d6aefdc74a59959974a423",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "7639d75a0c42f1e01516cf7ff97c1dff1829e5fb"
+      },
+      "mergedAt": "2024-12-12T07:25:27Z",
+      "number": 2093,
+      "title": "Check IsGenericType before call ConstructUnboundGenericType()",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2093",
+      "mergeSha": "7639d75a0c42f1e01516cf7ff97c1dff1829e5fb",
+      "files": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/MessagePack.SourceGenerator.csproj"
+      ],
+      "commitShas": [
+        "66917838e636c803d4d6aefdc74a59959974a423"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "src/MessagePack.SourceGenerator/MessagePack.SourceGenerator.csproj"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 69,
+      "baseRefName": "develop",
+      "baseRefOid": "ceab2d78ccc76e11a361c7e2c4358d4aff52154d",
+      "changedFiles": 3,
+      "deletions": 23,
+      "headRefOid": "f65514cbc9c1b4592dcc483960d2600d39cc954a",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "4dd227377108467e42e25d8ca93b8ba366ce21dc"
+      },
+      "mergedAt": "2024-06-28T17:41:46Z",
+      "number": 1859,
+      "title": "Report missing `[MessagePackObject]` attribute for generic types ",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/1859",
+      "mergeSha": "4dd227377108467e42e25d8ca93b8ba366ce21dc",
+      "files": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs",
+        "tests/MessagePack.SourceGenerator.Tests/MessagePackAnalyzerTests.cs"
+      ],
+      "commitShas": [
+        "57d9df89110866a22898425131c70fa2aa432a63",
+        "f65514cbc9c1b4592dcc483960d2600d39cc954a"
+      ],
+      "srcFiles": [
+        "src/MessagePack.SourceGenerator/Analyzers/MsgPack00xMessagePackAnalyzer.cs",
+        "src/MessagePack.SourceGenerator/CodeAnalysis/TypeCollector.cs"
+      ],
+      "szz": [],
+      "kind": "escaped"
+    },
+    {
+      "additions": 7,
+      "baseRefName": "develop",
+      "baseRefOid": "42a5c6c10417374f30aa227285f687ea8a89d5a2",
+      "changedFiles": 3,
+      "deletions": 6,
+      "headRefOid": "ab2616e046d50fec194283d2ef78210bf3dcd3fc",
+      "labels": [],
+      "mergeCommit": {
+        "oid": "ff35d17985e9fba4a24ca51976375184b6d9e376"
+      },
+      "mergedAt": "2024-10-25T16:54:54Z",
+      "number": 2044,
+      "title": "Avoid allocating an `ImmutableArray<T>.Builder` during deserialization",
+      "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/pull/2044",
+      "mergeSha": "ff35d17985e9fba4a24ca51976375184b6d9e376",
+      "files": [
+        "Directory.Packages.props",
+        "sandbox/TestData2/TestData2.csproj",
+        "src/MessagePack/Formatters/ImmutableCollectionFormatters.cs"
+      ],
+      "commitShas": [
+        "33278fa6cc857f32a7e5c632298fa64fbf2b0eb4",
+        "ab2616e046d50fec194283d2ef78210bf3dcd3fc"
+      ],
+      "srcFiles": [
+        "src/MessagePack/Formatters/ImmutableCollectionFormatters.cs"
+      ],
+      "szz": [],
+      "kind": "control"
+    }
+  ],
+  "escapedCount": 26,
+  "controlCount": 4
+}

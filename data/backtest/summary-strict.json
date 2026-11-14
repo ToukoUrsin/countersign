@@ -1,0 +1,229 @@
+{
+  "generatedAt": "2026-11-14T01:33:12.864709+00:00",
+  "method": "The population is merged MessagePack-CSharp pull requests from 2025-05-11 through 2026-11-11. SZZ marked a source line as escaped when a later fix PR changed a line blamed to an earlier merged PR; the seed-fixed sample contains 3 escaped PRs and 3 controls because only 14 of 36 merged PRs met the size/source filter. Each selected PR was run at its merge-time base parent and head through the unchanged pipeline stages in an isolated snapshot, then scored against the mapped fix lines.",
+  "population": {
+    "from": "2025-05-11",
+    "to": "2026-11-11",
+    "mergedPrsConsidered": 36,
+    "eligible": 14,
+    "seed": 20261114
+  },
+  "runs": 6,
+  "completed": 5,
+  "failed": 1,
+  "escaped": {
+    "prs": 3,
+    "caught": 0,
+    "routed": 3,
+    "skim": 0,
+    "missed": 0,
+    "fullRead": 3
+  },
+  "controls": {
+    "prs": 3,
+    "findingsShown": 7,
+    "findingsPerPr": 2.33
+  },
+  "lines": {
+    "total": 503,
+    "read": 503,
+    "skim": 0,
+    "skip": 0
+  },
+  "readFraction": 1.0,
+  "medianEstMinutes": 6.5,
+  "medianWallMinutes": 3.06,
+  "totalCostUsd": 8.3475,
+  "caveats": [
+    "Models may have seen these PRs and fixes in training, so detection is an upper bound.",
+    "SZZ labels are noisy: a later change to a line is not proof that the earlier line was buggy.",
+    "The sample is six PRs because only 14 PRs were eligible in this one repository and period.",
+    "This is one .NET repository and stack, with old commits that may not build.",
+    "Selection is constrained by the short recent history and seeded shuffle; it is not representative of all GitHub PRs.",
+    "One control had a sandbox restore infrastructure error and is reported as failed, not as a clean run."
+  ],
+  "rows": [
+    {
+      "pr": 2310,
+      "title": "Keep assembly versions stable across v3 servicing releases",
+      "mergedAt": "2026-10-21",
+      "kind": "control",
+      "fix": null,
+      "tier": "T3",
+      "lines": {
+        "total": 24,
+        "read": 24,
+        "skim": 0,
+        "skip": 0
+      },
+      "findingsShown": 2,
+      "outcome": "failed",
+      "why": "Pipeline infrastructure failure: restore failed (infrastructure)\n[run-tests] image=countersign-sandbox:dotnet8.0.402-r3 worktree=/bulk2/runs/linearcodereview/backtest/src/work/runs/messagepack-csharp__messagepack-csharp__2310/wt/base-prtests project=tests/MessagePack.Tests",
+      "estMinutes": 7,
+      "wallMinutes": 3.55,
+      "costUsd": 1.5706
+    },
+    {
+      "pr": 2302,
+      "title": "Merge develop back into master",
+      "mergedAt": "2026-09-18",
+      "kind": "control",
+      "fix": null,
+      "tier": "T3",
+      "lines": {
+        "total": 17,
+        "read": 17,
+        "skim": 0,
+        "skip": 0
+      },
+      "findingsShown": 3,
+      "outcome": "full-read",
+      "why": "No later SZZ-labelled fix was mapped to this PR; recorded as a control.",
+      "estMinutes": 6,
+      "wallMinutes": 2.7,
+      "costUsd": 1.0355
+    },
+    {
+      "pr": 2258,
+      "title": "perf: drop redundant char* fixed in MessagePackWriter.Write(string)",
+      "mergedAt": "2026-07-08",
+      "kind": "escaped",
+      "fix": {
+        "pr": 2287,
+        "title": "Fix OldSpec byte[] encoding emitting unsupported str8 headers",
+        "daysLater": 26,
+        "lines": [
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 457
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 476
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 501
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 560
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 563
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 569
+          }
+        ]
+      },
+      "tier": "T3",
+      "lines": {
+        "total": 22,
+        "read": 22,
+        "skim": 0,
+        "skip": 0
+      },
+      "findingsShown": 2,
+      "outcome": "full-read",
+      "why": "The later-fixed lines were in a unit the plan required the human to read.",
+      "estMinutes": 6,
+      "wallMinutes": 2.22,
+      "costUsd": 0.8005
+    },
+    {
+      "pr": 2273,
+      "title": "Merge master into develop",
+      "mergedAt": "2026-06-09",
+      "kind": "escaped",
+      "fix": {
+        "pr": 2258,
+        "title": "perf: drop redundant char* fixed in MessagePackWriter.Write(string)",
+        "daysLater": 29,
+        "lines": [
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 594
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 597
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 613
+          },
+          {
+            "path": "src/MessagePack/MessagePackWriter.cs",
+            "line": 616
+          }
+        ]
+      },
+      "tier": "T3",
+      "lines": {
+        "total": 48,
+        "read": 48,
+        "skim": 0,
+        "skip": 0
+      },
+      "findingsShown": 5,
+      "outcome": "full-read",
+      "why": "The later-fixed lines were in a unit the plan required the human to read.",
+      "estMinutes": 14,
+      "wallMinutes": 2.96,
+      "costUsd": 1.5835
+    },
+    {
+      "pr": 2212,
+      "title": "Use 'Write' instead of 'WriteInt32' for union type keys",
+      "mergedAt": "2025-08-17",
+      "kind": "control",
+      "fix": null,
+      "tier": "T3",
+      "lines": {
+        "total": 10,
+        "read": 10,
+        "skim": 0,
+        "skip": 0
+      },
+      "findingsShown": 2,
+      "outcome": "full-read",
+      "why": "No later SZZ-labelled fix was mapped to this PR; recorded as a control.",
+      "estMinutes": 4,
+      "wallMinutes": 3.78,
+      "costUsd": 0.9419
+    },
+    {
+      "pr": 2206,
+      "title": "Remove unneeded GetTypeInfo() calls",
+      "mergedAt": "2025-08-17",
+      "kind": "escaped",
+      "fix": {
+        "pr": 2224,
+        "title": "Fix various disposable issues",
+        "daysLater": 4,
+        "lines": [
+          {
+            "path": "src/MessagePack/Internal/Sequence`1.cs",
+            "line": 31
+          }
+        ]
+      },
+      "tier": "T3",
+      "lines": {
+        "total": 382,
+        "read": 382,
+        "skim": 0,
+        "skip": 0
+      },
+      "findingsShown": 4,
+      "outcome": "full-read",
+      "why": "The later-fixed lines were in a unit the plan required the human to read.",
+      "estMinutes": 67,
+      "wallMinutes": 3.16,
+      "costUsd": 2.4155
+    }
+  ]
+}

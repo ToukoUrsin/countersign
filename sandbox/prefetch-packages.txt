@@ -1,0 +1,5 @@
+# <package id> <exact version> - downloaded into the shared NuGet cache before the first run, because tests
+# ask for them at run time (Microsoft.CodeAnalysis.Testing ReferenceAssemblies.Net.Net80 / Net60) and the
+# test step has no network.
+Microsoft.NETCore.App.Ref 8.0.0
+Microsoft.NETCore.App.Ref 6.0.0

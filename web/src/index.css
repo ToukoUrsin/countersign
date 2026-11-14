@@ -1,0 +1,589 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ───────────── tokens ───────────── */
+/* One neutral ramp, one accent, three state colours. Colour means state, never decoration. */
+:root,
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #08090a;
+  --panel: #0c0d0e;
+  --surface: #111214;
+  --surface-2: #18191c;
+  --surface-3: #212226;
+  --line: rgb(255 255 255 / 0.07);
+  --line-strong: rgb(255 255 255 / 0.13);
+  --fg: #f4f5f6;
+  --fg-2: #c2c6ce;
+  --fg-3: #8b9099;
+  --fg-4: #666b74;
+  --accent: #8089f0;
+  --accent-strong: #5e6ad2;
+  --accent-fg: #ffffff;
+  --green: #4cb782;
+  --amber: #e0a43c;
+  --red: #ef6b63;
+  --blue: #7ea6e6;
+  --purple: var(--accent);
+  --grey: #8b9099;
+  --shadow-pop: 0 0 0 1px rgb(255 255 255 / 0.08), 0 12px 32px -8px rgb(0 0 0 / 0.6), 0 32px 72px -16px rgb(0 0 0 / 0.5);
+  --diff-add: rgb(76 183 130 / 0.1);
+  --diff-add-gutter: rgb(76 183 130 / 0.16);
+  --diff-del: rgb(239 107 99 / 0.1);
+  --diff-del-gutter: rgb(239 107 99 / 0.16);
+  --code-kw: #c59bd6;
+  --code-type: #7fc4c9;
+  --code-str: #9cc38a;
+  --code-num: #d9a86c;
+  --code-com: #666b74;
+  --code-fn: #9fb7ea;
+  --chart-t0: #3f4350;
+  --chart-t1: #565c7e;
+  --chart-t2: #6c75b8;
+  --chart-t3: #8089f0;
+  --flow-line: #50545e;
+  --flow-accent: #7078e0;
+  /* the proof map: one loud colour for the lines a person reads, calm ones for the rest */
+  --pm-yours: #f7b23b;
+  --pm-skim: #7d6534;
+  --pm-proven: #2b5a45;
+  --pm-read: #5a63b5;
+  --pm-pin: #ff6257;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #fcfcfd;
+  --panel: #f6f6f7;
+  --surface: #ffffff;
+  --surface-2: #f1f1f3;
+  --surface-3: #e7e7ea;
+  --line: rgb(15 16 24 / 0.08);
+  --line-strong: rgb(15 16 24 / 0.16);
+  --fg: #16171b;
+  --fg-2: #3b3e46;
+  --fg-3: #686c75;
+  --fg-4: #9498a1;
+  --accent: #515cc6;
+  --accent-strong: #5e6ad2;
+  --accent-fg: #ffffff;
+  --green: #1c8a55;
+  --amber: #a8650c;
+  --red: #cc3d36;
+  --blue: #3567b8;
+  --purple: var(--accent);
+  --grey: #686c75;
+  --shadow-pop: 0 0 0 1px rgb(15 16 24 / 0.08), 0 12px 32px -10px rgb(15 16 24 / 0.18), 0 32px 72px -20px rgb(15 16 24 / 0.2);
+  --diff-add: rgb(28 138 85 / 0.1);
+  --diff-add-gutter: rgb(28 138 85 / 0.17);
+  --diff-del: rgb(204 61 54 / 0.09);
+  --diff-del-gutter: rgb(204 61 54 / 0.16);
+  --code-kw: #7b3fa0;
+  --code-type: #1f6f78;
+  --code-str: #3d7a2c;
+  --code-num: #96560f;
+  --code-com: #8a8e97;
+  --code-fn: #2c4f9e;
+  --chart-t0: #d5d6de;
+  --chart-t1: #b0b4d6;
+  --chart-t2: #8088cf;
+  --chart-t3: #515cc6;
+  --flow-line: #a9adb6;
+  --flow-accent: #5d68d0;
+  --pm-yours: #e07c00;
+  --pm-skim: #edc98f;
+  --pm-proven: #b4dcc5;
+  --pm-read: #a9afe8;
+  --pm-pin: #d42a21;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-fg-3: var(--fg-3);
+  --color-fg-4: var(--fg-4);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-fg: var(--accent-fg);
+  --color-green: var(--green);
+  --color-blue: var(--blue);
+  --color-amber: var(--amber);
+  --color-red: var(--red);
+  --color-purple: var(--purple);
+  --color-grey: var(--grey);
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --shadow-pop: var(--shadow-pop);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --text-2xs: 11px;
+  --text-2xs--line-height: 15px;
+  --text-xs: 12px;
+  --text-xs--line-height: 17px;
+  --text-sm: 12.5px;
+  --text-sm--line-height: 18px;
+  --text-base: 13px;
+  --text-base--line-height: 20px;
+  --text-md: 14px;
+  --text-md--line-height: 21px;
+  --text-lg: 15px;
+  --text-lg--line-height: 24px;
+  --text-xl: 18px;
+  --text-xl--line-height: 26px;
+  --text-2xl: 22px;
+  --text-2xl--line-height: 29px;
+  --text-3xl: 28px;
+  --text-3xl--line-height: 34px;
+}
+
+/* ───────────── base ───────────── */
+html {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 20px;
+  font-feature-settings: 'cv01', 'ss03', 'calt';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--fg);
+  scroll-padding-top: 64px;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+}
+::selection {
+  background: color-mix(in oklch, var(--accent) 38%, transparent);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+:focus-visible:not(.outline-none) {
+  outline: 2px solid color-mix(in oklch, var(--accent) 80%, transparent);
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+button,
+a,
+[role='button'],
+summary {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+input,
+textarea {
+  caret-color: var(--accent);
+}
+.num {
+  font-variant-numeric: tabular-nums;
+}
+.mono {
+  font-family: var(--font-mono);
+  font-feature-settings: 'calt' 0;
+}
+/* the -style longhand only: the `text-wrap` shorthand would switch wrapping back on for truncated titles */
+h1,
+h2,
+h3 {
+  text-wrap-style: balance;
+}
+p {
+  text-wrap-style: pretty;
+}
+
+/* ───────────── motion ───────────── */
+@keyframes drawer-in {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+}
+@keyframes sheet-in {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+}
+@keyframes pop-in {
+  from {
+    transform: translateY(-4px) scale(0.985);
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+@keyframes pulse-dot {
+  50% {
+    opacity: 0.35;
+  }
+}
+@keyframes seal {
+  from {
+    transform: scale(1.12) rotate(-6deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(-6deg);
+    opacity: 1;
+  }
+}
+.anim-drawer {
+  animation: drawer-in 220ms var(--ease-out-expo);
+}
+.anim-sheet {
+  animation: sheet-in 220ms var(--ease-out-expo);
+}
+.anim-pop {
+  animation: pop-in 160ms var(--ease-out-expo);
+}
+.anim-fade {
+  animation: fade-in 160ms ease-out;
+}
+.anim-seal {
+  animation: seal 240ms var(--ease-out-expo) both;
+}
+.pulse-dot {
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+.skeleton {
+  border-radius: 5px;
+  background: linear-gradient(90deg, var(--surface) 0%, var(--surface-2) 50%, var(--surface) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+/* ───────────── code + diff ───────────── */
+.code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 20px;
+  font-feature-settings: 'calt' 0;
+  tab-size: 4;
+}
+.tok-kw {
+  color: var(--code-kw);
+}
+.tok-type {
+  color: var(--code-type);
+}
+.tok-str {
+  color: var(--code-str);
+}
+.tok-num {
+  color: var(--code-num);
+}
+.tok-com {
+  color: var(--code-com);
+}
+.tok-fn {
+  color: var(--code-fn);
+}
+.diff-row {
+  display: grid;
+  grid-template-columns: 44px 44px 18px minmax(0, 1fr);
+}
+.diff-row > .ln {
+  text-align: right;
+  padding-right: 8px;
+  color: var(--fg-4);
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+.diff-row > .sign {
+  text-align: center;
+  user-select: none;
+  color: var(--fg-3);
+}
+.diff-row > .src {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding-right: 16px;
+  min-width: 0;
+}
+.diff-add {
+  background: var(--diff-add);
+}
+.diff-add > .ln {
+  background: var(--diff-add-gutter);
+  color: var(--fg-2);
+}
+.diff-add > .sign {
+  color: var(--green);
+}
+.diff-del {
+  background: var(--diff-del);
+}
+.diff-del > .ln {
+  background: var(--diff-del-gutter);
+  color: var(--fg-2);
+}
+.diff-del > .sign {
+  color: var(--red);
+}
+/* on a phone the gutter gives its width to the code, and deep indents are halved */
+@media (max-width: 640px) {
+  .diff-row {
+    grid-template-columns: 30px 30px 14px minmax(0, 1fr);
+    font-size: 11.5px;
+    line-height: 19px;
+  }
+  .diff-row > .ln {
+    padding-right: 5px;
+    font-size: 10.5px;
+  }
+  .diff-row > .src {
+    padding-left: calc(var(--ind, 0) * 0.5ch + 3ch) !important;
+    text-indent: -3ch !important;
+    padding-right: 10px;
+  }
+}
+
+/* prose inside requirement excerpts */
+.prose-mini p {
+  margin: 0 0 8px;
+}
+.prose-mini code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: var(--surface-2);
+}
+.prose-mini pre {
+  margin: 0 0 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 17px;
+}
+.prose-mini pre code {
+  padding: 0;
+  background: none;
+}
+.prose-mini h4 {
+  margin: 12px 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--fg);
+}
+.prose-mini ul {
+  margin: 0 0 8px;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+/* ───────────── review experience ───────────── */
+@keyframes chapter-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes stage-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes node-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+@keyframes edge-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+.anim-chapter {
+  animation: chapter-in 200ms var(--ease-out-expo) both;
+}
+.anim-stage {
+  animation: stage-in 200ms ease-out both;
+}
+.flow-node {
+  animation: node-in 220ms var(--ease-out-expo) both;
+  transition:
+    opacity 160ms ease-out,
+    border-color 160ms ease-out,
+    background-color 160ms ease-out,
+    box-shadow 160ms ease-out;
+}
+.flow-edge {
+  transition:
+    opacity 160ms ease-out,
+    stroke 160ms ease-out;
+}
+.flow-edge.draw {
+  stroke-dasharray: 1;
+  animation: edge-draw 250ms ease-out both;
+}
+.flow-scroll {
+  mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent 100%);
+}
+/* text that stands for work in progress: it breathes, no gradient */
+.shimmer-text {
+  color: var(--fg-3);
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+.caret::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 14px;
+  margin-left: 2px;
+  vertical-align: -2px;
+  background: var(--fg-3);
+  animation: caret-blink 1s steps(1) infinite;
+}
+.prose p + p {
+  margin-top: 10px;
+}
+.prose code,
+.icode {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  padding: 0.5px 3px;
+  border-radius: 4px;
+  background: color-mix(in oklch, var(--fg) 7%, transparent);
+  color: var(--fg);
+  font-feature-settings: 'calt' 0;
+  overflow-wrap: anywhere;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+/* an id of the dossier (E3, AC1, U2): pointing at it says what it is */
+.idref {
+  text-decoration: underline dotted var(--fg-4);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+/* a short block of code or tool output inside running text: wraps, never runs off the column */
+.block-code {
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-size: 11.5px;
+  line-height: 18px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+/* code that is read, not scanned: long lines wrap instead of hiding behind a scrollbar */
+.wrap-code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.guide {
+  overflow-wrap: anywhere;
+}
+.scroll-fade {
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+}
+
+/* ───────────── proof map ───────────── */
+@keyframes pm-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+.pm-row {
+  animation: pm-in 380ms var(--ease-out-expo) both;
+  animation-delay: calc(var(--r, 0) * 16ms);
+}
+.pm-marks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding-block: 4px;
+  min-width: 0;
+}
+.pm-h {
+  display: contents;
+  cursor: pointer;
+}
+.pm-m {
+  width: var(--pm, 8px);
+  height: var(--pm, 8px);
+  border-radius: 2px;
+  background: var(--pm-proven);
+  transition:
+    background-color 420ms ease-out,
+    box-shadow 120ms ease-out;
+}
+.pm-yours {
+  background: var(--pm-yours);
+}
+.pm-skim {
+  background: var(--pm-skim);
+}
+.pm-read {
+  background: var(--pm-read);
+}
+.pm-h:hover > .pm-m,
+.pm-h[data-on] > .pm-m {
+  box-shadow: 0 0 0 1px var(--fg);
+}
+/* a finding sits on the line it cites: a dot when a failing test reproduces it, a ring when it is argued from the code */
+.pm-m[data-pin] {
+  border-radius: 50%;
+  background: var(--pm-pin);
+  box-shadow: 0 0 0 1.5px var(--bg), 0 0 0 3px var(--pm-pin);
+  position: relative;
+  z-index: 1;
+}
+.pm-m[data-pin='argued'] {
+  background: var(--bg);
+}
+.pm-m[data-pin][data-dead] {
+  --pm-pin: var(--fg-4);
+}
+.pm-sw {
+  width: 10px;
+  height: 10px;
+  border-radius: 2.5px;
+  flex: none;
+}

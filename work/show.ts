@@ -1,0 +1,14 @@
+const n=process.argv[2];
+const d=JSON.parse(require("fs").readFileSync(`data/dossiers/toukoursin__junction26-messagepack-csharp__${n}/dossier.json`,"utf8"));
+const p=(...a:any[])=>console.log(...a);
+p("STATUS",d.status,d.recommendation.verdict,"|",d.requirement.id,d.requirement.title); p("SUMMARY",d.recommendation.summary); p("DISTRUST",d.recommendation.distrustIf);
+p("STORY",d.story.headline,"|",d.story.steps.length,"steps; diagrams",d.diagrams.map((x:any)=>x.id+":"+x.kind+":"+x.nodes.length+"n/"+x.edges.length+"e"));
+for(const c of d.requirement.criteria)p("AC",c.id,c.status,c.kind,c.evidenceIds.join(","),"-",c.text.slice(0,150));
+for(const u of d.units)p("UNIT",u.id,u.kind,u.tier,u.ask,"+"+u.additions,"-"+u.deletions,u.hunkIds.length+"h",u.traced?"":"UNTRACED",u.riskFactors.map((r:any)=>r.key+":"+r.points).join(" "),"|",u.title.slice(0,70),"| skip:",u.skipProof?.text?.slice(0,90));
+for(const e of d.evidence)p("EV",e.id,e.kind,e.strength,e.polarity,"-",e.title.slice(0,60),"=>",(e.conclusion||"").slice(0,150));
+for(const f of d.findings)p("FIND",f.id,f.severity,f.strength,f.unitId,"-",f.title.slice(0,130));
+for(const f of d.discarded)p("KILLED",f.reason,"-",f.title.slice(0,100));
+for(const r of d.refusals)p("REFUSAL",r.id,r.reasonKind,r.blocking?"BLOCKING":"","-",r.question.slice(0,170));
+for(const n of d.notChecked)p("NOTCHECKED",n.what.slice(0,90),"—",n.why.slice(0,110));
+p("ROUTING",d.routing.tier,d.routing.score,"read",d.routing.readLines,"skim",d.routing.skimLines,"skip",d.routing.skipLines,"total",d.routing.totalLines,d.routing.estMinutes+"min",d.routing.spotCheck.selected,d.routing.rulesFired);
+p("STAGES",d.stages.map((s:any)=>s.name+":"+s.status+(s.costUsd?"$"+s.costUsd.toFixed(2):"")).join(" "));
