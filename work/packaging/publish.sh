@@ -4,7 +4,11 @@ cd "$(dirname "$0")/../.."
 message=${1:?usage: work/packaging/publish.sh 'commit message'}
 git add -A
 scan_file=work/packaging/.staged-scan.txt
-git diff --cached --binary --no-color | gitleaks detect --no-banner --redact --pipe > "$scan_file" 2>&1 || {
+scan_dir="/tmp/countersign-staged-scan-$$"
+mkdir -p "$scan_dir"
+trap 'rm -rf "${scan_dir:?}"' EXIT
+git checkout-index --all --prefix="$scan_dir/"
+gitleaks dir --no-banner --redact --source "$scan_dir" > "$scan_file" 2>&1 || {
   echo "secret scan failed; see $scan_file" >&2
   git reset >/dev/null
   exit 1
