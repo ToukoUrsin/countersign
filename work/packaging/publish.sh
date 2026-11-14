@@ -8,7 +8,7 @@ scan_dir="/tmp/countersign-staged-scan-$$"
 mkdir -p "$scan_dir"
 trap 'rm -rf "${scan_dir:?}"' EXIT
 git checkout-index --all --prefix="$scan_dir/"
-gitleaks dir --no-banner --redact --source "$scan_dir" > "$scan_file" 2>&1 || {
+gitleaks dir --no-banner --redact "$scan_dir" > "$scan_file" 2>&1 || {
   echo "secret scan failed; see $scan_file" >&2
   git reset >/dev/null
   exit 1
